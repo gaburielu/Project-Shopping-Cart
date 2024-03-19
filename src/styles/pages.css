@@ -140,6 +140,9 @@
   box-shadow: 0 0 15px rgba(240, 130, 172, 0.5);
   padding: 20px;
   grid-template-rows: 3fr 1fr;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .checkout-top {
@@ -153,7 +156,10 @@
   margin: 10px;
 }
 
-.checkout-button {
+.checkout-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* BUTTON */

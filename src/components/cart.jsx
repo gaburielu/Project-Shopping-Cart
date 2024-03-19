@@ -6,7 +6,7 @@ import {
   removeFromCart,
   totalAmount,
 } from "./utils";
-import { AddOne, RemoveOne } from "./minor";
+import { AddOne, RemoveOne, CheckoutButton } from "./minor";
 import "../styles/pages.css";
 
 const Cart = ({ products, setProducts }) => {
@@ -72,12 +72,20 @@ const Cart = ({ products, setProducts }) => {
               {(total * 0.1).toFixed(2)} $
             </p>
             {cartHasItem ? (
-              <p>Shipping &nbsp; &nbsp; &nbsp; : 20$</p>
+              <p>Shipping &nbsp; &nbsp; &nbsp; : 20 $</p>
             ) : (
-              <p>Shipping &nbsp; &nbsp; &nbsp; : 0$</p>
+              <p>Shipping &nbsp; &nbsp; &nbsp; : 0 $</p>
             )}
+            {cartHasItem ? (
+            <p>Total Amount: {(total*1.1+20).toFixed(2)} $</p>
+            ) : (
+              <p>Total Amount: 0 $</p>
+            )}
+
           </div>
-          <div className="checkout-bottom"></div>
+          <div className="checkout-bottom">
+            <CheckoutButton />
+          </div>
         </div>
       </div>
     </div>

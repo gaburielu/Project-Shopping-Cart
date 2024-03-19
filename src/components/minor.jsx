@@ -80,4 +80,12 @@ const RemoveOne = ({handleRemoveFromCart, id}) => {
   );
 };
 
-export { Wave, AddToCartBtn, AddOne, RemoveOne };
+const CheckoutButton = () => {
+  return (
+    <button className="button-1" role="button">
+      CHECKOUT
+    </button>
+  );
+};
+
+export { Wave, AddToCartBtn, AddOne, RemoveOne, CheckoutButton };
